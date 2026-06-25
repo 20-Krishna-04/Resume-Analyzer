@@ -1,4 +1,4 @@
-[AI-Resume-Analyzer]
+## AI-Resume-Analyzer
 
 ## About the Project 🥱
 <div align="center">
