@@ -58,25 +58,19 @@ class ResumeParser(object):
 
         entities = utils.extract_entity_sections_grad(self.__text_raw)
 
-        # extract name
         try:
             self.__details['name'] = cust_ent['Name'][0]
         except (IndexError, KeyError):
             self.__details['name'] = name
 
-        # extract email
         self.__details['email'] = email
 
-        # extract mobile number
         self.__details['mobile_number'] = mobile
 
-        # extract skills
         self.__details['skills'] = skills
 
-        # no of pages
         self.__details['no_of_pages'] = utils.get_number_of_pages(self.__resume)
 
-        # extract education Degree
         try:
             self.__details['degree'] = cust_ent['Degree']
         except KeyError:
